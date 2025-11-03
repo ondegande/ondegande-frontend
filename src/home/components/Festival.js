@@ -17,7 +17,7 @@ export default function Festival() {
             )}
             <div className="festival__text column gap-8">
               <h3 className="f-20 w-600">{cleanTitle(festival.MAIN_TITLE)}</h3>
-              <p className="f-16 w-400 c-555555">{festival.USAGE_DAY_WEEK_AND_TIME}</p>
+              <p className="w-400 c-555555">{festival.USAGE_DAY_WEEK_AND_TIME}</p>
             </div>
           </div>
         ))}
