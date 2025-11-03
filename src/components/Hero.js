@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-50">
       <div className="w-full h-96 md:h-[500px] flex items-center justify-center px-4">
-        <svg viewBox="0 0 1200 500" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
+        <svg viewBox="0 0 1200 480" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
           {/* Sky Gradient */}
           <defs>
             <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
