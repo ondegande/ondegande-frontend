@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import "../styles/Header.css";
+import "../styles/header.css";
 
 export default function Header() {
   return (
     <div className="header">
-      <img className="header__img" src={logo} alt="logo" />
+      <Link to="/">
+        <img className="header__img" src={logo} alt="logo" />
+      </Link>
 
       <div className="header__right">
         <button className="header__right__tap">코스 짜보이소</button>
