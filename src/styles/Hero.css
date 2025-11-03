@@ -1,0 +1,37 @@
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(-100px) translateY(0px);
+  }
+  50% {
+    transform: translateX(50px) translateY(-20px);
+  }
+  100% {
+    transform: translateX(200px) translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 3s ease-in-out infinite 1.5s;
+}
+
+.animate-fly {
+  animation: fly 6s ease-in-out infinite;
+}
+
+.animate-fly-delayed {
+  animation: fly 6s ease-in-out infinite 3s;
+}
