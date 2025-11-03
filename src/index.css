@@ -1,13 +1,110 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* 정렬 */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.j-space-between {
+  justify-content: space-between;
+}
+.a-center {
+  align-items: center;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* 갭 */
+.gap-8 {
+  gap: 8px;
+}
+.gap-16 {
+  gap: 16px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-24 {
+  gap: 24px;
+}
+.gap-28 {
+  gap: 28px;
+}
+.gap-40 {
+  gap: 40px;
+}
+
+/* 배경 색 */
+.bg-0096ff {
+  background-color: #0096ff;
+}
+.bg-07a707 {
+  background-color: #07a707;
+}
+.bg-eff6ff {
+  background-color: #eff6ff;
+}
+.bg-ffa200 {
+  background-color: #ffa200;
+}
+.bg-ff2b2b {
+  background-color: #ff2b2b;
+}
+.bg-ffffff {
+  background-color: #ffffff;
+}
+
+/* 보더 */
+.br-12 {
+  border-radius: 12px;
+}
+
+/* 폰트 사이즈 */
+.f-16 {
+  font-size: 16px;
+}
+.f-18 {
+  font-size: 18px;
+}
+.f-20 {
+  font-size: 20px;
+}
+.f-24 {
+  font-size: 24px;
+}
+.f-36 {
+  font-size: 36px;
+}
+
+/* 폰트 웨이트 */
+.w-400 {
+  font-weight: 400;
+}
+.w-600 {
+  font-weight: 600;
+}
+
+/* 폰트 색 */
+.c-555555 {
+  color: #555555;
+}
+.c-155dfc {
+  color: #155dfc;
+}
+
+.cursor {
+  cursor: pointer;
 }
