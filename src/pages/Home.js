@@ -1,9 +1,58 @@
+import { useEffect, useState } from "react";
+import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faCompass, faMap, faSquareCaretRight } from "@fortawesome/free-regular-svg-icons";
 import Hero from "../components/Hero";
 import "../styles/Home.css";
 
+const API_URL = "https://apis.data.go.kr/6260000/FestivalService/getFestivalKr";
+const API_KEY = process.env.REACT_APP_SERVICE_KEY;
+
+const monthFestivals = {
+  1: [440, 449, 2136],
+  2: [440, 449, 502, 503],
+  3: [497, 499],
+  4: [403, 441, 523, 1432],
+  5: [329, 403, 404, 405, 406, 442, 1432, 2373],
+  6: [329, 330, 807, 2368],
+  7: [253, 1705, 1897, 1961],
+  8: [71, 1698, 1699, 1705, 1807, 1961],
+  9: [427, 470, 500, 524, 1694, 1699, 1705, 1961],
+  10: [331, 407, 411, 414, 427, 1705],
+  11: [395, 427],
+  12: [440],
+};
+
 export default function Home() {
+  const [festivals, setFestivals] = useState([]);
+
+  useEffect(() => {
+    const currentMonth = moment().month() + 1;
+
+    async function fetchFestivals() {
+      try {
+        const response = await fetch(`${API_URL}?serviceKey=${API_KEY}&pageNo=1&numOfRows=38&resultType=json`);
+        const data = await response.json();
+
+        const currentFestivals = data?.getFestivalKr?.item;
+        if (!currentFestivals) return;
+
+        const currentMonthFestivals = monthFestivals[currentMonth].map(String);
+        const filteredFestivals = currentFestivals.filter((festival) =>
+          currentMonthFestivals.includes(String(festival.UC_SEQ))
+        );
+
+        setFestivals(filteredFestivals);
+      } catch (error) {
+        console.error("Error fetching festival data:", error);
+      }
+    }
+
+    fetchFestivals();
+  }, []);
+
+  const cleanTitle = (title) => (title ? title.replace(/\(.*?\)/, "").trim() : "");
+
   return (
     <div className="home">
       <Hero />
@@ -51,21 +100,17 @@ export default function Home() {
         <h1 className="home__title">축제 정보</h1>
         <h2 className="home__subtitle">현재 부산에서 진행 중인 축제들</h2>
         <div className="home__festival__features">
-          <div className="festival__features__feature">
-            <img className="features__feature__img" src="" alt="festival-img" />
-            <h3 className="features__feature__title">축제</h3>
-            <p className="features__feature__subtitle">날짜</p>
-          </div>
-          <div className="festival__features__feature">
-            <img className="features__feature__img" src="" alt="festival-img" />
-            <h3 className="features__feature__title">축제</h3>
-            <p className="features__feature__subtitle">날짜</p>
-          </div>
-          <div className="festival__features__feature">
-            <img className="features__feature__img" src="" alt="festival-img" />
-            <h3 className="features__feature__title">축제</h3>
-            <p className="features__feature__subtitle">날짜</p>
-          </div>
+          {festivals.map((festival, index) => (
+            <div key={index} className="festival__features__feature">
+              {festival.MAIN_IMG_NORMAL && (
+                <img className="features__feature__img" src={festival.MAIN_IMG_NORMAL} alt={festival.FESTIVAL_NM} />
+              )}
+              <div className="features__feature__txt">
+                <h3 className="features__feature__title">{cleanTitle(festival.MAIN_TITLE)}</h3>
+                <p className="features__feature__subtitle">{festival.USAGE_DAY_WEEK_AND_TIME}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
