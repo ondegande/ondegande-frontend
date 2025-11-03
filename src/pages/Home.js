@@ -9,8 +9,8 @@ export default function Home() {
       <Hero />
 
       <div className="home__guide">
-        <h1 className="home__guide__title">부산 여행 플래닝</h1>
-        <h2 className="home__guide__subtitle">당신의 여행 스타일에 맞춘 완벽한 가이드</h2>
+        <h1 className="home__title">부산 여행 플래닝</h1>
+        <h2 className="home__subtitle">당신의 여행 스타일에 맞춘 완벽한 가이드</h2>
         <div className="home__guide__features">
           <div className="guide__features__feature">
             <div className="features__feature__icons bg-blue">
@@ -47,7 +47,27 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="home__festival"></div>
+      <div className="home__festival">
+        <h1 className="home__title">축제 정보</h1>
+        <h2 className="home__subtitle">현재 부산에서 진행 중인 축제들</h2>
+        <div className="home__festival__features">
+          <div className="festival__features__feature">
+            <img className="features__feature__img" src="" alt="festival-img" />
+            <h3 className="features__feature__title">축제</h3>
+            <p className="features__feature__subtitle">날짜</p>
+          </div>
+          <div className="festival__features__feature">
+            <img className="features__feature__img" src="" alt="festival-img" />
+            <h3 className="features__feature__title">축제</h3>
+            <p className="features__feature__subtitle">날짜</p>
+          </div>
+          <div className="festival__features__feature">
+            <img className="features__feature__img" src="" alt="festival-img" />
+            <h3 className="features__feature__title">축제</h3>
+            <p className="features__feature__subtitle">날짜</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
