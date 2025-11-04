@@ -5,10 +5,12 @@ import "./index.css";
 import App from "./App";
 import Home from "./pages/Home";
 import MakeCourse from "./pages/MakeCourse";
+import DoNow from "./pages/DoNow";
 
 const pages = [
   { path: "/", element: <Home /> },
   { path: "/makecourse", element: <MakeCourse /> },
+  { path: "/donow", element: <DoNow /> },
 ];
 const router = createBrowserRouter([
   {

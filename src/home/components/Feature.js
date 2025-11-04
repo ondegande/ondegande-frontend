@@ -19,14 +19,16 @@ export default function Feature() {
             <div className="feature__button c-155dfc">자세히 보기 →</div>
           </div>
         </Link>
-        <div className="feature column j-space-between gap-40 br-12 cursor">
-          <div className="feature__icons br-12 bg-ffa200">
-            <FontAwesomeIcon className="feature__icon" icon={faCompass} />
+        <Link to="donow">
+          <div className="feature column j-space-between gap-40 br-12 cursor">
+            <div className="feature__icons br-12 bg-ffa200">
+              <FontAwesomeIcon className="feature__icon" icon={faCompass} />
+            </div>
+            <h3 className="f-24 w-600">인자 머하노?</h3>
+            <p className="w-400 c-555555">내 위치 기반 주변 맛집, 관광지, 숙소 추천</p>
+            <div className="feature__button c-155dfc">자세히 보기 →</div>
           </div>
-          <h3 className="f-24 w-600">인자 머하노?</h3>
-          <p className="w-400 c-555555">내 위치 기반 주변 맛집, 관광지, 숙소 추천</p>
-          <div className="feature__button c-155dfc">자세히 보기 →</div>
-        </div>
+        </Link>
         <div className="feature column j-space-between gap-40 br-12 cursor">
           <div className="feature__icons br-12 bg-07a707">
             <FontAwesomeIcon className="feature__icon" icon={faMap} />

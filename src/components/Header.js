@@ -13,7 +13,9 @@ export default function Header() {
         <Link to="/makecourse" className="header__tap f-18 cursor">
           코스 짜보이소
         </Link>
-        <button className="header__tap f-18 cursor">인자 머하노?</button>
+        <Link to="donow" className="header__tap f-18 cursor">
+          인자 머하노?
+        </Link>
         <button className="header__tap f-18 cursor">이래 가보이소</button>
         <button className="header__tap f-18 cursor">유튜바 코스</button>
       </div>
