@@ -8,6 +8,19 @@
 
   font-size: 16px;
   font-weight: 500;
+}
+
+body,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a {
   color: #000000;
 }
 
@@ -38,6 +51,9 @@
 }
 
 /* 갭 */
+.gap-4 {
+  gap: 4px;
+}
 .gap-8 {
   gap: 8px;
 }
@@ -56,6 +72,9 @@
 .gap-28 {
   gap: 28px;
 }
+.gap-32 {
+  gap: 32px;
+}
 .gap-40 {
   gap: 40px;
 }
@@ -70,8 +89,23 @@
 .bg-0b0b0b {
   background-color: #0b0b0b;
 }
+.bg-155dfc {
+  background-color: #155dfc;
+}
+.bg-dbeafe {
+  background-color: #dbeafe;
+}
 .bg-eff6ff {
   background-color: #eff6ff;
+}
+.bg-f8f8f8 {
+  background-color: #f8f8f8;
+}
+.bg-f8fbff {
+  background-color: #f8fbff;
+}
+.bg-f9f8f8 {
+  background-color: #f9f8f8;
 }
 .bg-ffa200 {
   background-color: #ffa200;
@@ -90,8 +124,14 @@
 .br-12 {
   border-radius: 12px;
 }
+.br-100 {
+  border-radius: 100%;
+}
 
 /* 폰트 사이즈 */
+.f-14 {
+  font-size: 14px;
+}
 .f-18 {
   font-size: 18px;
 }
@@ -104,8 +144,14 @@
 .f-36 {
   font-size: 36px;
 }
+.f-48 {
+  font-size: 48px;
+}
 
 /* 폰트 웨이트 */
+.w-300 {
+  font-weight: 300;
+}
 .w-400 {
   font-weight: 400;
 }
@@ -114,11 +160,20 @@
 }
 
 /* 폰트 색 */
+.c-000000 {
+  color: #000000;
+}
 .c-155dfc {
   color: #155dfc;
 }
 .c-555555 {
   color: #555555;
+}
+.c-777777 {
+  color: #777777;
+}
+.c-ff2b2b {
+  color: #ff2b2b;
 }
 .c-ffffff {
   color: #ffffff;
