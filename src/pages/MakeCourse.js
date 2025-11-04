@@ -1,16 +1,16 @@
 import { useState, useCallback } from "react";
-import "../MakeCourse/styles/makeCourse.css";
+import "../makeCourse/styles/makeCourse.css";
 
-import useKakaoMap from "../MakeCourse/hooks/useKakaoMap";
-import useDaysManager from "../MakeCourse/hooks/useDaysManager";
-import useClipboard from "../MakeCourse/hooks/useClipboard";
-import usePlacesSearch from "../MakeCourse/hooks/usePlacesSearch";
+import useKakaoMap from "../makeCourse/hooks/useKakaoMap";
+import useDaysManager from "../makeCourse/hooks/useDaysManager";
+import useClipboard from "../makeCourse/hooks/useClipboard";
+import usePlacesSearch from "../makeCourse/hooks/usePlacesSearch";
 
-import PlansManager from "../MakeCourse/components/PlansManager";
-import SearchPlace from "../MakeCourse/components/SearchPlace";
-import SearchResults from "../MakeCourse/components/SearchResults";
-import NoTourPlans from "../MakeCourse/components/NoTourPlans";
-import TourPlans from "../MakeCourse/components/TourPlans";
+import PlansManager from "../makeCourse/components/PlansManager";
+import SearchPlace from "../makeCourse/components/SearchPlace";
+import SearchResults from "../makeCourse/components/SearchResults";
+import NoTourPlans from "../makeCourse/components/NoTourPlans";
+import TourPlans from "../makeCourse/components/TourPlans";
 
 export default function MakeCourse() {
   const [isMapVisible, setIsMapVisible] = useState(false);
