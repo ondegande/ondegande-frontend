@@ -186,7 +186,7 @@ export default function DoNow() {
   return (
     <div>
       <main>
-        <section className="surrounding">
+        <section className="row j-space-between">
           <section className="locationsetting-section">
             <button onClick={getCurrentLocation} className="location-button">
               내 위치

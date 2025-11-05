@@ -7,14 +7,10 @@
   min-height: 100px;
   flex-wrap: wrap;
 }
-.result__place {
-  width: 100%;
-}
 .place__border {
   border-bottom: 1px solid #cad5e2;
 }
 .place__section {
-  width: 100%;
   padding: 12px 0px;
 }
 .plus__button {

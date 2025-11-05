@@ -24,6 +24,14 @@ a {
   color: #000000;
 }
 
+a {
+  text-decoration: none;
+}
+
+.width-100 {
+  width: 100%;
+}
+
 /* 정렬 */
 .column {
   display: flex;

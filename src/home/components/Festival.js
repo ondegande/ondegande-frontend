@@ -11,7 +11,7 @@ export default function Festival() {
       <h2 className="f-18 w-400">현재 부산에서 진행 중인 축제들</h2>
       <div className="festival__features grid-3 gap-24">
         {festivals.map((festival, index) => (
-          <div key={index} className="festival__feature column j-space-between gap-24 bg-ffffff br-12">
+          <div key={index} className="festival__feature width-100 column j-space-between gap-24 bg-ffffff br-12">
             {festival.MAIN_IMG_NORMAL && (
               <img className="festival__img" src={festival.MAIN_IMG_NORMAL} alt={festival.FESTIVAL_NM} />
             )}

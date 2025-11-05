@@ -4,7 +4,7 @@ import "../styles/header.css";
 
 export default function Header() {
   return (
-    <div className="header row j-space-between a-center bg-ffffffd6">
+    <div className="header width-100 row j-space-between a-center bg-ffffffd6">
       <Link to="/">
         <img className="header__img cursor" src={logo} alt="logo" />
       </Link>
