@@ -1,0 +1,15 @@
+.donow__search__result {
+  position: absolute;
+  top: 63px;
+  z-index: 90;
+}
+.result__list {
+  padding: 4px 28px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.list__place {
+  padding: 8px;
+}
+.list__border {
+  border-bottom: 1px solid #cad5e2;
+}

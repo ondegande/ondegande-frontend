@@ -1,0 +1,22 @@
+.donow__search {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  padding: 28px;
+}
+.donow__input {
+  flex: 1;
+  border: 1px solid #cad5e2;
+  padding: 4px 8px;
+}
+.current__button {
+  border: 1px solid #cad5e2;
+  padding: 8px 24px;
+}
+.current__button:hover {
+  background-color: #f4f4f4;
+}
+.place__button {
+  padding: 8px 32px;
+}
+.place__button:hover {
+  background-color: #1447e6;
+}

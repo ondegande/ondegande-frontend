@@ -1,0 +1,21 @@
+.place {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.place__image {
+  max-height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.place__info {
+  padding: 12px 12px 20px;
+}
+.place__title,
+.place__address {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.map__button {
+  padding: 8px;
+}

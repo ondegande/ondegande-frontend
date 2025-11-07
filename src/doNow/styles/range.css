@@ -1,0 +1,40 @@
+.range {
+  width: 50%;
+}
+.range__slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.range__slider:hover {
+  opacity: 1;
+}
+.range__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #155dfc;
+  cursor: pointer;
+}
+.range__slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #155dfc;
+  cursor: pointer;
+}
+.range__slider::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #155dfc;
+  cursor: pointer;
+}
