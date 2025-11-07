@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import "../doNow/styles/doNow.css";
 
+import SearchLocation from "../doNow/components/SearchLocation";
+import LocationResults from "../doNow/components/LocationResults";
+import Category from "../doNow/components/Category";
+import Range from "../doNow/components/Range";
+import PlaceResults from "../doNow/components/PlaceResults";
+import NoPlaces from "../doNow/components/NoPlaces";
+
 export default function DoNow() {
   const [distance, setDistance] = useState(1500);
   const [category, setCategory] = useState("sightseeing");
@@ -8,7 +15,6 @@ export default function DoNow() {
   const [searchResults, setSearchResults] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [places, setPlaces] = useState([]);
-  const [showNoPlacesMessage, setShowNoPlacesMessage] = useState(false);
 
   const SERVICE_KEY = process.env.REACT_APP_SERVICE_KEY;
 
@@ -39,12 +45,20 @@ export default function DoNow() {
         if (window.kakao?.maps) return resolve();
         const script = document.createElement("script");
         script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.REACT_APP_KAKAO_JAVASCRIPT_KEY}&libraries=services&autoload=false`;
-        script.onload = () => (window.kakao?.maps ? resolve() : reject("Kakao Maps API 로드 실패"));
+        script.onload = () => {
+          window.kakao.maps.load(() => {
+            resolve();
+          });
+        };
         script.onerror = () => reject(new Error("Kakao Maps API 스크립트 로드 오류"));
         document.head.appendChild(script);
       });
 
-    loadKakaoMap();
+    loadKakaoMap()
+      .then(() => {
+        getCurrentLocation();
+      })
+      .catch((error) => console.error(error));
   }, []);
 
   const getCurrentLocation = () => {
@@ -54,7 +68,6 @@ export default function DoNow() {
           const { latitude, longitude } = position.coords;
           setSelectedLocation({ lat: latitude, lng: longitude });
           setSearchResults([]);
-          setShowNoPlacesMessage(false);
 
           if (window.kakao && window.kakao.maps) {
             const geocoder = new window.kakao.maps.services.Geocoder();
@@ -104,7 +117,6 @@ export default function DoNow() {
           });
 
         setPlaces(filteredItems);
-        setShowNoPlacesMessage(filteredItems.length === 0);
       } catch (error) {
         console.error("API 호출 중 오류 발생:", error);
       }
@@ -141,6 +153,7 @@ export default function DoNow() {
       console.error("주소를 입력해주세요.");
       return;
     }
+    document.getElementById("places").style = "display: block";
 
     geocoder.addressSearch(location, (result, status) => {
       if (status === kakao.maps.services.Status.OK) {
@@ -148,7 +161,6 @@ export default function DoNow() {
           setSearchResults(result.slice(0, 5));
           const { y, x } = result[0];
           setSelectedLocation({ lat: y, lng: x });
-          setShowNoPlacesMessage(false);
         } else {
           setSearchResults([]);
         }
@@ -177,6 +189,7 @@ export default function DoNow() {
   const handleSelectLocation = (lat, lng, address) => {
     setSelectedLocation({ lat, lng });
     setLocation(address);
+    document.getElementById("places").style = "display: none";
   };
 
   const handlePlaceClick = async (placeName) => {
@@ -184,123 +197,39 @@ export default function DoNow() {
   };
 
   return (
-    <div>
-      <main>
-        <section className="row j-space-between">
-          <section className="locationsetting-section">
-            <button onClick={getCurrentLocation} className="location-button">
-              내 위치
-            </button>
-            <div className="surroundingsearch-container">
-              <input
-                type="text"
-                placeholder="위치를 입력하세요."
-                value={location}
-                onChange={handleLocationChange}
-                onKeyPress={(e) => {
-                  if (e.key === "Enter") {
-                    handleSearch();
-                  }
-                }}
-                className="surroundingsearch-input"
-              />
-              <button onClick={handleSearch} className="surroundingsearch-button">
-                검색
-              </button>
-            </div>
+    <div className="donow column a-center gap-32 bg-f8fbff">
+      <div className="width-100 column gap-10">
+        <h1 className="f-36 w-600">주변 놀거리 찾기</h1>
+        <h2 className="f-18 w-400 c-555555">주변의 맛집, 관광지, 숙소를 쉽게 찾아보세요</h2>
+      </div>
 
-            <div className="surroundingsearch-results">
-              {searchResults.length > 0 ? (
-                <ul className="results-list">
-                  {searchResults.map((result, index) => (
-                    <li key={index} onClick={() => handleSelectLocation(result.y, result.x, result.place_name)}>
-                      <span className="place-name3">{result.place_name || result.address_name}</span>
-                      <span className="address-name3">({result.address_name || "주소 없음"})</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p></p>
-              )}
-            </div>
-          </section>
+      <div className="donow__locate width-100 column">
+        <SearchLocation
+          location={location}
+          handleLocationChange={handleLocationChange}
+          handleSearch={handleSearch}
+          getCurrentLocation={getCurrentLocation}
+        />
 
-          <section className="surrounding-section">
-            <div className="range-slider-container">
-              <label htmlFor="distance">{distance}m</label>
-              <input
-                id="distance"
-                type="range"
-                min="500"
-                max="2500"
-                step="100"
-                value={distance}
-                onChange={handleDistanceChange}
-                className="range-slider"
-              />
-            </div>
+        <LocationResults searchResults={searchResults} handleSelectLocation={handleSelectLocation} />
+      </div>
 
-            <div className="category-buttons">
-              <button
-                className={`category-button ${category === "sightseeing" ? "active" : ""}`}
-                onClick={() => handleCategoryClick("sightseeing")}
-              >
-                관광지
-              </button>
-              <button
-                className={`category-button ${category === "food" ? "active" : ""}`}
-                onClick={() => handleCategoryClick("food")}
-              >
-                맛집
-              </button>
-              <button
-                className={`category-button ${category === "accommodation" ? "active" : ""}`}
-                onClick={() => handleCategoryClick("accommodation")}
-              >
-                숙소
-              </button>
-            </div>
+      <div className="category width-100 row j-space-between a-center bg-ffffff br-12">
+        <Category category={category} handleCategoryClick={handleCategoryClick} />
 
-            <div className="places">
-              {places.length > 0 ? (
-                places.map((place) => (
-                  <div key={place.contentid} className="place">
-                    <img src={place.firstimage} alt="" className="place-image" />
-                    <div className="place-details">
-                      <div className="place-name">{place.title}</div>
-                      <p className="place-address">{place.addr1}</p>
-                      <button className="info-button2" onClick={() => handlePlaceClick(place.addr1)}>
-                        길찾기
-                      </button>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <div className="DN-mes">
-                  <div className="search-prompt">
-                    <p>{location.trim() === "" ? "장소를 검색해주세요." : null}</p>
-                  </div>
+        <Range distance={distance} handleDistanceChange={handleDistanceChange} />
+      </div>
 
-                  <div className="er">
-                    <p>
-                      {selectedLocation &&
-                        location.trim() !== "" &&
-                        showNoPlacesMessage &&
-                        (category === "sightseeing"
-                          ? "주변 관광지가 없습니다."
-                          : category === "food"
-                          ? "주변 맛집이 없습니다."
-                          : category === "accommodation"
-                          ? "주변 숙소가 없습니다."
-                          : null)}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-          </section>
-        </section>
-      </main>
+      <div className="width-100 column gap-20">
+        <h1 class="f-24 w-600">주변 관광지 ({places.length}개)</h1>
+        <div className="grid-3 gap-20">
+          {places.length > 0 ? (
+            places.map((place) => <PlaceResults place={place} handlePlaceClick={handlePlaceClick} />)
+          ) : (
+            <NoPlaces location={location} selectedLocation={selectedLocation} category={category} />
+          )}
+        </div>
+      </div>
     </div>
   );
 }
