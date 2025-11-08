@@ -6,11 +6,13 @@ import App from "./App";
 import Home from "./pages/Home";
 import MakeCourse from "./pages/MakeCourse";
 import DoNow from "./pages/DoNow";
+import GoThis from "./pages/GoThis";
 
 const pages = [
   { path: "/", element: <Home /> },
   { path: "/makecourse", element: <MakeCourse /> },
   { path: "/donow", element: <DoNow /> },
+  { path: "/gothis", element: <GoThis /> },
 ];
 const router = createBrowserRouter([
   {

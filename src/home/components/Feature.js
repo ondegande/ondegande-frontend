@@ -29,14 +29,16 @@ export default function Feature() {
             <div className="width-100 c-155dfc">자세히 보기 →</div>
           </div>
         </Link>
-        <div className="feature column j-space-between gap-40 br-12 cursor">
-          <div className="feature__icons br-12 bg-07a707">
-            <FontAwesomeIcon className="feature__icon" icon={faMap} />
+        <Link to="/dothis">
+          <div className="feature column j-space-between gap-40 br-12 cursor">
+            <div className="feature__icons br-12 bg-07a707">
+              <FontAwesomeIcon className="feature__icon" icon={faMap} />
+            </div>
+            <h3 className="f-24 w-600">이래 가보이소</h3>
+            <p className="w-400 c-555555">부산 테마별 추천 여행 코스 모음</p>
+            <div className="width-100 c-155dfc">자세히 보기 →</div>
           </div>
-          <h3 className="f-24 w-600">이래 가보이소</h3>
-          <p className="w-400 c-555555">부산 테마별 추천 여행 코스 모음</p>
-          <div className="width-100 c-155dfc">자세히 보기 →</div>
-        </div>
+        </Link>
         <div className="feature column j-space-between gap-40 br-12 cursor">
           <div className="feature__icons br-12 bg-ff2b2b">
             <FontAwesomeIcon className="feature__icon" icon={faSquareCaretRight} />
