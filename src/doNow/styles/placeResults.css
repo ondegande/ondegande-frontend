@@ -19,3 +19,6 @@
 .map__button {
   padding: 8px;
 }
+.map__button:hover {
+  background-color: #1447e6;
+}
