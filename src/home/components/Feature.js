@@ -29,7 +29,7 @@ export default function Feature() {
             <div className="width-100 c-155dfc">자세히 보기 →</div>
           </div>
         </Link>
-        <Link to="/dothis">
+        <Link to="gothis">
           <div className="feature column j-space-between gap-40 br-12 cursor">
             <div className="feature__icons br-12 bg-07a707">
               <FontAwesomeIcon className="feature__icon" icon={faMap} />

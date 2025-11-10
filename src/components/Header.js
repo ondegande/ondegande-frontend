@@ -10,13 +10,15 @@ export default function Header() {
       </Link>
 
       <div className="row gap-40">
-        <Link to="/makecourse" className="header__tap f-18 cursor">
+        <Link to="makecourse" className="header__tap f-18 cursor">
           코스 짜보이소
         </Link>
         <Link to="donow" className="header__tap f-18 cursor">
           인자 머하노?
         </Link>
-        <button className="header__tap f-18 cursor">이래 가보이소</button>
+        <Link to="gothis" className="header__tap f-18 cursor">
+          <button className="header__tap f-18 cursor">이래 가보이소</button>
+        </Link>
         <button className="header__tap f-18 cursor">유튜바 코스</button>
       </div>
     </div>
