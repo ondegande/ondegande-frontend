@@ -38,3 +38,8 @@
   background: #155dfc;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .range {
+    width: 100%;
+  }
+}
