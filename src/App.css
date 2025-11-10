@@ -5,6 +5,13 @@ main {
 }
 
 /* 코스 짜보이소 사용 */
+@media (max-width: 767px) {
+  .makecourse {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .map {
   grid-column: span 2 / span 2;
   height: 50vh;
@@ -12,10 +19,35 @@ main {
   position: relative;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
+@media (max-width: 767px) {
+  .map {
+    height: 40vh;
+    max-height: 300px;
+  }
+}
 
 /* 인자 머하노 사용 */
 .donow__locate {
   position: relative;
+}
+
+.category {
+  gap: 10px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  padding: 28px;
+}
+@media (max-width: 767px) {
+  .category {
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .category {
+    padding: 16px;
+  }
 }
 
 /* 유튜바 코스 사용 */
@@ -23,6 +55,12 @@ main {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   padding: 32px;
   margin-top: 20px;
+}
+@media (max-width: 480px) {
+  .youtuber {
+    padding: 20px;
+    margin-top: 12px;
+  }
 }
 
 .divLine {
@@ -32,13 +70,38 @@ main {
 .youtuber__buttons {
   margin-top: 10px;
 }
+@media (max-width: 480px) {
+  .youtuber__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+  }
+}
+
 .recommend__button:hover {
   background-color: #1447e6;
 }
+@media (max-width: 480px) {
+  .recommend__button {
+    padding: 12px;
+  }
+}
+
 .home__button {
   border: 2px solid #cad5e2;
   padding: 12px;
 }
 .home__button:hover {
   background-color: #f4f4f4;
+}
+@media (max-width: 767px) {
+  .youtuber__service {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .recommend__button,
+  .home__button {
+    font-size: 14px;
+  }
 }
