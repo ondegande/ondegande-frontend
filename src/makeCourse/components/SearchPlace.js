@@ -23,7 +23,7 @@ export default function SearchPlace({ searchPlaces }) {
           onClick={searchPlaces}
         >
           검색
-          <FontAwesomeIcon icon={faCircleRight} />
+          <FontAwesomeIcon className="searchplace__icon" icon={faCircleRight} />
         </button>
       </div>
     </div>
