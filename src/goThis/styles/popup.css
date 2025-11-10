@@ -1,0 +1,40 @@
+.popup {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.popup__content {
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+
+  position: relative;
+  overflow: auto;
+}
+
+.popup__top {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #ebe6e7;
+  padding: 28px 24px;
+}
+.popup__close:hover {
+  color: #ff2b2b;
+}
+
+.popup__bottom {
+  padding: 24px;
+}
+.popup__text {
+  white-space: pre-line;
+  line-height: 1.4;
+  word-break: keep-all;
+}

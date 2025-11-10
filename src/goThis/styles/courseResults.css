@@ -1,0 +1,27 @@
+.course {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.course__main__image {
+  max-height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.course__info__section {
+  padding: 12px 12px 20px;
+}
+.course__title,
+.course__subtitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info__button {
+  padding: 8px;
+}
+.info__button:hover {
+  background-color: #1447e6;
+}

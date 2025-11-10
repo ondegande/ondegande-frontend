@@ -1,0 +1,24 @@
+.location__select {
+  grid-column: span 2 / span 2;
+  position: relative;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  padding: 20px;
+}
+
+.p__number {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 26px;
+}
+
+.location__select__button {
+  padding: 8px;
+}
+.location__select__button:hover {
+  background-color: #ebe6e7;
+}
+.location__select__button.selected {
+  color: white;
+  background-color: #155dfc;
+}

@@ -1,0 +1,22 @@
+.course__buttons {
+  grid-column: span 1 / span 1;
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  padding: 20px;
+}
+
+.course__button__course,
+.course__button__random {
+  padding: 16px;
+}
+.course__button__course:hover {
+  background-color: #1447e6;
+}
+.course__button__random {
+  border: 2px solid #dab2ff;
+}
+.course__button__random:hover {
+  background-color: #fdeaf4;
+}
