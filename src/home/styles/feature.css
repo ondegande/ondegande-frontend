@@ -1,12 +1,37 @@
 .feature__explain {
   padding-bottom: 60px;
 }
+@media (max-width: 480px) {
+  .feature__explain {
+    padding-bottom: 40px;
+  }
+}
 
 .features {
   width: 70%;
   padding: 40px;
 }
+@media (max-width: 1023px) {
+  .features {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .features {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .features {
+    width: 95%;
+  }
+}
+
 .feature {
+  height: 100%;
   box-shadow: 0px 2px 2px #0000000a, 0px 8px 16px 0px #0000000a;
   padding: 32px;
   transition: transform 0.3s ease;
@@ -17,6 +42,18 @@
 }
 .feature:hover .feature__icons {
   transform: scale(1.08);
+}
+@media (max-width: 1023px) {
+  .feature {
+    gap: 32px;
+    padding: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .feature {
+    gap: 24px;
+    padding: 16px;
+  }
 }
 
 .feature__icons {
