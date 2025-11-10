@@ -16,7 +16,7 @@ export default function SearchLocation({ location, handleLocationChange, handleS
         className="donow__input br-12 f-14"
       />
       <button onClick={getCurrentLocation} className="current__button br-12 f-14 w-400 cursor">
-        현재 위치
+        현위치
       </button>
       <button onClick={handleSearch} className="place__button bg-155dfc br-12 f-14 w-400 c-ffffff cursor">
         검색
