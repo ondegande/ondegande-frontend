@@ -19,7 +19,9 @@ export default function Header() {
         <Link to="gothis" className="header__tap f-18 cursor">
           <button className="header__tap f-18 cursor">이래 가보이소</button>
         </Link>
-        <button className="header__tap f-18 cursor">유튜바 코스</button>
+        <Link to="youtuber" className="header__tap f-18 cursor">
+          <button className="header__tap f-18 cursor">유튜바 코스</button>
+        </Link>
       </div>
     </div>
   );

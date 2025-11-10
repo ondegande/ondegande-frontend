@@ -9,7 +9,7 @@ export default function Feature() {
       <h1 className="f-36 w-600">부산 여행 플래닝</h1>
       <h2 className="f-18 w-400 c-555555">당신의 여행 스타일에 맞춘 완벽한 가이드</h2>
       <div className="features grid-2 gap-28">
-        <Link to="/makecourse">
+        <Link to="makecourse">
           <div className="feature column j-space-between gap-40 br-12 cursor">
             <div className="feature__icons br-12 bg-0096ff">
               <FontAwesomeIcon className="feature__icon" icon={faPenToSquare} />
@@ -39,14 +39,16 @@ export default function Feature() {
             <div className="width-100 c-155dfc">자세히 보기 →</div>
           </div>
         </Link>
-        <div className="feature column j-space-between gap-40 br-12 cursor">
-          <div className="feature__icons br-12 bg-ff2b2b">
-            <FontAwesomeIcon className="feature__icon" icon={faSquareCaretRight} />
+        <Link to="youtuber">
+          <div className="feature column j-space-between gap-40 br-12 cursor">
+            <div className="feature__icons br-12 bg-ff2b2b">
+              <FontAwesomeIcon className="feature__icon" icon={faSquareCaretRight} />
+            </div>
+            <h3 className="f-24 w-600">유튜바 코스</h3>
+            <p className="w-400 c-555555">유튜버들이 방문한 코스와 영상 정보</p>
+            <div className="width-100 c-155dfc">자세히 보기 →</div>
           </div>
-          <h3 className="f-24 w-600">유튜바 코스</h3>
-          <p className="w-400 c-555555">유튜버들이 방문한 코스와 영상 정보</p>
-          <div className="width-100 c-155dfc">자세히 보기 →</div>
-        </div>
+        </Link>
       </div>
     </div>
   );
