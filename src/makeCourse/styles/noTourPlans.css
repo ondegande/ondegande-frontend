@@ -2,3 +2,8 @@
   border: 2px dashed #8ec5ff;
   padding: 80px;
 }
+@media (max-width: 480px) {
+  .plans {
+    padding: 32px;
+  }
+}
