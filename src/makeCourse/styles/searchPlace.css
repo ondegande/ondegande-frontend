@@ -3,6 +3,16 @@
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   padding: 24px;
 }
+@media (max-width: 480px) {
+  .search {
+    padding: 16px;
+  }
+
+  .searchplace__icon {
+    display: none;
+  }
+}
+
 .search__input {
   flex: 1;
   border: 2px solid #cad5e2;
