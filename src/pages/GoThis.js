@@ -138,8 +138,8 @@ function GoThis() {
         <ThemeSelect themes={themes} selectedThemes={selectedThemes} handleThemeToggle={handleThemeToggle} />
       </div>
 
-      {results.length === 0 && <NoCourse />}
       <div className="grid-3 gap-20">
+        {results.length === 0 && <NoCourse />}
         {(results.length > 0 || randomCourse) &&
           (randomCourse ? [randomCourse] : results).map((result, index) => (
             <CourseResults index={index} result={result} cleanTitle={cleanTitle} handleImagePopup={handleImagePopup} />
