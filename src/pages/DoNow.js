@@ -196,7 +196,7 @@ export default function DoNow() {
   };
 
   return (
-    <div className="default-padding column a-center gap-32 bg-f8fbff">
+    <div className="default-padding column a-center gap-32">
       <div className="width-100 column gap-10">
         <h1 className="f-36 w-600">주변 놀거리 찾기</h1>
         <h2 className="f-18 w-400 c-555555">주변의 맛집, 관광지, 숙소를 쉽게 찾아보세요</h2>

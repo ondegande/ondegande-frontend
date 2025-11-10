@@ -124,7 +124,7 @@ function GoThis() {
   };
 
   return (
-    <div className="default-padding column gap-32 bg-f8fbff">
+    <div className="default-padding column gap-32">
       <div className="column gap-10">
         <h1 className="f-36 w-600">부산 여행 코스 추천</h1>
         <h2 className="f-18 w-400 c-555555">나만의 맞춤 여행 코스를 찾아보세요</h2>
