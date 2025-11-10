@@ -3,13 +3,36 @@
   top: 63px;
   z-index: 90;
 }
+@media (max-width: 480px) {
+  .donow__search__result {
+    top: 49px;
+  }
+}
+
 .result__list {
   padding: 4px 28px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
+@media (max-width: 767px) {
+  .result__list {
+    padding: 4px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .result__list {
+    padding: 4px 16px;
+  }
+}
+
 .list__place {
   padding: 8px;
 }
+@media (max-width: 767px) {
+  .list__place {
+    flex-direction: column;
+  }
+}
+
 .list__border {
   border-bottom: 1px solid #cad5e2;
 }
