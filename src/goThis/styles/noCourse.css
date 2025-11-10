@@ -1,4 +1,10 @@
 .no__courses {
+  grid-column: span 3 / span 3;
   border: 2px dashed #dab2ff;
   padding: 80px;
+}
+@media (max-width: 480px) {
+  .no__courses {
+    padding: 32px;
+  }
 }
