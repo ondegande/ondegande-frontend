@@ -2,11 +2,30 @@
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   padding: 28px;
 }
+@media (max-width: 767px) {
+  .donow__search {
+    gap: 8px;
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .donow__search {
+    gap: 4px;
+    padding: 16px;
+  }
+}
+
 .donow__input {
   flex: 1;
   border: 1px solid #cad5e2;
   padding: 4px 8px;
 }
+@media (max-width: 480px) {
+  .donow__input {
+    padding: 4px 6px;
+  }
+}
+
 .current__button {
   border: 1px solid #cad5e2;
   padding: 8px 24px;
@@ -19,4 +38,26 @@
 }
 .place__button:hover {
   background-color: #1447e6;
+}
+@media (max-width: 767px) {
+  .current__button {
+    border: 1px solid #cad5e2;
+    padding: 8px;
+  }
+
+  .place__button {
+    padding: 8px 12px;
+  }
+}
+@media (max-width: 480px) {
+  .current__button,
+  .place__button {
+    font-size: 12px;
+  }
+  .current__button {
+    padding: 4px;
+  }
+  .place__button {
+    padding: 4px 8px;
+  }
 }
