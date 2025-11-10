@@ -1,10 +1,11 @@
-.category {
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  padding: 28px;
+@media (max-width: 767px) {
+  .category__section {
+    width: 100%;
+  }
 }
+
 .category__button {
   border: 1px solid #cad5e2;
-  padding: 0 24px;
   height: 36px;
   line-height: 14px;
 }
