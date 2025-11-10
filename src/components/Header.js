@@ -9,7 +9,7 @@ export default function Header() {
         <img className="header__img cursor" src={logo} alt="logo" />
       </Link>
 
-      <div className="row gap-40">
+      <div className="header__tap__section row gap-40">
         <Link to="makecourse" className="header__tap f-18 cursor">
           코스 짜보이소
         </Link>
