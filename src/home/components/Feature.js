@@ -10,7 +10,7 @@ export default function Feature() {
       <h2 className="f-18 w-400 c-555555">당신의 여행 스타일에 맞춘 완벽한 가이드</h2>
       <div className="features grid-2 gap-28">
         <Link to="makecourse">
-          <div className="feature column j-space-between gap-40 br-12 cursor">
+          <div className="feature column j-space-between gap-40 bg-ffffff br-12 cursor">
             <div className="feature__icons br-12 bg-0096ff">
               <FontAwesomeIcon className="feature__icon" icon={faPenToSquare} />
             </div>
@@ -20,7 +20,7 @@ export default function Feature() {
           </div>
         </Link>
         <Link to="donow">
-          <div className="feature column j-space-between gap-40 br-12 cursor">
+          <div className="feature column j-space-between gap-40 bg-ffffff br-12 cursor">
             <div className="feature__icons br-12 bg-ffa200">
               <FontAwesomeIcon className="feature__icon" icon={faCompass} />
             </div>
@@ -30,7 +30,7 @@ export default function Feature() {
           </div>
         </Link>
         <Link to="gothis">
-          <div className="feature column j-space-between gap-40 br-12 cursor">
+          <div className="feature column j-space-between gap-40 bg-ffffff br-12 cursor">
             <div className="feature__icons br-12 bg-07a707">
               <FontAwesomeIcon className="feature__icon" icon={faMap} />
             </div>
@@ -40,7 +40,7 @@ export default function Feature() {
           </div>
         </Link>
         <Link to="youtuber">
-          <div className="feature column j-space-between gap-40 br-12 cursor">
+          <div className="feature column j-space-between gap-40 bg-ffffff br-12 cursor">
             <div className="feature__icons br-12 bg-ff2b2b">
               <FontAwesomeIcon className="feature__icon" icon={faSquareCaretRight} />
             </div>
