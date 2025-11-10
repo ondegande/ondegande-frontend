@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "../doNow/styles/doNow.css";
 
 import SearchLocation from "../doNow/components/SearchLocation";
 import LocationResults from "../doNow/components/LocationResults";
@@ -197,7 +196,7 @@ export default function DoNow() {
   };
 
   return (
-    <div className="donow column a-center gap-32 bg-f8fbff">
+    <div className="default-padding column a-center gap-32 bg-f8fbff">
       <div className="width-100 column gap-10">
         <h1 className="f-36 w-600">주변 놀거리 찾기</h1>
         <h2 className="f-18 w-400 c-555555">주변의 맛집, 관광지, 숙소를 쉽게 찾아보세요</h2>

@@ -1,5 +1,4 @@
 import { useState, useCallback } from "react";
-import "../makeCourse/styles/makeCourse.css";
 
 import useKakaoMap from "../makeCourse/hooks/useKakaoMap";
 import useDaysManager from "../makeCourse/hooks/useDaysManager";
@@ -26,7 +25,7 @@ export default function MakeCourse() {
   }, [days]);
 
   return (
-    <div className="makecourse column gap-32 bg-f8fbff">
+    <div className="default-padding column gap-32 bg-f8fbff">
       <div className="column gap-10">
         <h1 className="f-36 w-600">부산 여행 코스 만들기</h1>
         <h2 className="f-18 w-400 c-555555">장소를 검색하고 나만의 완벽한 여행 일정을 만들어보세요</h2>

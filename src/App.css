@@ -1,3 +1,18 @@
 main {
-  padding: 40px 0px 0px;
+  min-height: 100vh;
+  padding: 40px 0 0;
+}
+
+/* 코스 짜보이소 사용 */
+.map {
+  grid-column: span 2 / span 2;
+  height: 50vh;
+  max-height: 500px;
+  position: relative;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* 인자 머하노 사용 */
+.donow__locate {
+  position: relative;
 }

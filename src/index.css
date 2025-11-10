@@ -32,6 +32,10 @@ a {
   width: 100%;
 }
 
+.default-padding {
+  padding: 70px 20vw;
+}
+
 /* 정렬 */
 .column {
   display: flex;
@@ -100,11 +104,23 @@ a {
 .bg-155dfc {
   background-color: #155dfc;
 }
+.bg-9810fa {
+  background-color: #9810fa;
+}
 .bg-dbeafe {
   background-color: #dbeafe;
 }
+.bg-ecfeff {
+  background-color: #ecfeff;
+}
 .bg-eff6ff {
   background-color: #eff6ff;
+}
+.bg-fdf2f8 {
+  background-color: #fdf2f8;
+}
+.bg-f6f3f4 {
+  background-color: #f6f3f4;
 }
 .bg-f8f8f8 {
   background-color: #f8f8f8;
@@ -114,6 +130,9 @@ a {
 }
 .bg-f9f8f8 {
   background-color: #f9f8f8;
+}
+.bg-fdf2f8 {
+  background-color: #fdf2f8;
 }
 .bg-ffa200 {
   background-color: #ffa200;
@@ -179,6 +198,12 @@ a {
 }
 .c-777777 {
   color: #777777;
+}
+.c-9810fa {
+  color: #9810fa;
+}
+.c-9810fa96 {
+  color: #9810fa96;
 }
 .c-ff2b2b {
   color: #ff2b2b;
