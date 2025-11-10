@@ -81,7 +81,7 @@ export default function DoNow() {
         (error) => {
           console.error("위치를 가져오는 중 오류 발생:", error);
           if (error.code === error.PERMISSION_DENIED) {
-            alert("위치 불러오기를 허용하지 않았습니다.");
+            console.log("위치 불러오기를 허용하지 않았습니다.");
           }
         }
       );
@@ -140,6 +140,11 @@ export default function DoNow() {
   };
 
   const handleSearch = () => {
+    if (!location.trim()) {
+      console.error("주소를 입력해주세요.");
+      return;
+    }
+
     if (!window.kakao) {
       console.error("Kakao Map API가 로드되지 않았습니다.");
       return;
@@ -148,10 +153,6 @@ export default function DoNow() {
     const kakao = window.kakao;
     const geocoder = new kakao.maps.services.Geocoder();
 
-    if (!location.trim()) {
-      console.error("주소를 입력해주세요.");
-      return;
-    }
     document.getElementById("places").style = "display: block";
 
     geocoder.addressSearch(location, (result, status) => {
@@ -221,9 +222,11 @@ export default function DoNow() {
 
       <div className="width-100 column gap-20">
         <h1 className="f-24 w-600">주변 관광지 ({places.length}개)</h1>
-        <div className="grid-3 gap-20">
+        <div className="place__result grid-3 gap-20">
           {places.length > 0 ? (
-            places.map((place) => <PlaceResults place={place} handlePlaceClick={handlePlaceClick} />)
+            places.map((place) => (
+              <PlaceResults key={place.contentid} place={place} handlePlaceClick={handlePlaceClick} />
+            ))
           ) : (
             <NoPlaces location={location} selectedLocation={selectedLocation} category={category} />
           )}
