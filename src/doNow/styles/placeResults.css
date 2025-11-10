@@ -2,10 +2,15 @@
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .place__image {
-  max-height: 150px;
+  height: 150px;
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+@media (max-width: 767px) {
+  .place__image {
+    height: 120px;
+  }
 }
 .place__info {
   padding: 12px 12px 20px;
