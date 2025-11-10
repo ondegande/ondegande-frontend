@@ -24,18 +24,24 @@ export default function Youtuber() {
             <h3 className="f-18">대신 이용할 수 있는 서비스</h3>
             <div className="row gap-10">
               <div className="c-155dfc">→</div>
-              <h4>코스 짜보이소</h4>
-              <p className="w-400 c-777777">- 일정과 장소를 직접 추가하여 나만의 코스 제작</p>
+              <div className="youtuber__service row gap-10">
+                <h4>코스 짜보이소</h4>
+                <p className="w-400 c-777777">일정과 장소를 직접 추가하여 나만의 코스 제작</p>
+              </div>
             </div>
             <div className="row gap-10">
               <div className="c-155dfc">→</div>
-              <h4>인자 머하노?</h4>
-              <p className="w-400 c-777777">- 내 주변 관광지, 맛집, 숙소 탐색</p>
+              <div className="youtuber__service row gap-10">
+                <h4>인자 머하노?</h4>
+                <p className="w-400 c-777777">내 주변 관광지, 맛집, 숙소 탐색</p>
+              </div>
             </div>
             <div className="row gap-10">
               <div className="c-155dfc">→</div>
-              <h4>코스 짜보이소</h4>
-              <p className="w-400 c-777777">- 부산의 추천 코스 확인, 랜덤 코스를 통한 P의 여행</p>
+              <div className="youtuber__service row gap-10">
+                <h4>코스 짜보이소</h4>
+                <p className="w-400 c-777777">부산의 추천 코스 확인, 랜덤 코스로 P의 여행</p>
+              </div>
             </div>
           </div>
 
