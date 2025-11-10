@@ -28,12 +28,30 @@ a {
   text-decoration: none;
 }
 
+.width-50 {
+  width: 50%;
+}
 .width-100 {
   width: 100%;
 }
 
 .default-padding {
   padding: 70px 20vw;
+}
+@media (max-width: 1023px) {
+  .default-padding {
+    padding: 70px 10vw;
+  }
+}
+@media (max-width: 767px) {
+  .default-padding {
+    padding: 50px 10vw;
+  }
+}
+@media (max-width: 480px) {
+  .default-padding {
+    padding: 50px 6vw;
+  }
 }
 
 /* 정렬 */
@@ -60,6 +78,17 @@ a {
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 767px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
 /* 갭 */
@@ -170,6 +199,25 @@ a {
 }
 .f-48 {
   font-size: 48px;
+}
+@media (max-width: 1023px) {
+  .f-18 {
+    font-size: 16px;
+  }
+  .f-24 {
+    font-size: 20px;
+  }
+  .f-36 {
+    font-size: 28px;
+  }
+  .f-48 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 480px) {
+  .f-48 {
+    font-size: 32px;
+  }
 }
 
 /* 폰트 웨이트 */
