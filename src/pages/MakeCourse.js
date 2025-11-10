@@ -31,7 +31,7 @@ export default function MakeCourse() {
         <h2 className="f-18 w-400 c-555555">장소를 검색하고 나만의 완벽한 여행 일정을 만들어보세요</h2>
       </div>
 
-      <div className="grid-3 gap-20">
+      <div className="makecourse grid-3 gap-20">
         <div id="map" className="map br-12"></div>
 
         <PlansManager
