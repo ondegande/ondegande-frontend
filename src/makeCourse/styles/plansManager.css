@@ -6,9 +6,28 @@
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   padding: 20px;
 }
+@media (max-width: 767px) {
+  .plan__buttons {
+    width: 100%;
+    position: relative;
+    top: 0;
+    order: 4;
+  }
+
+  .plan__buttons__section {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .plan__buttons {
+    padding: 16px;
+  }
+}
+
 .buttons__day {
   padding: 20px;
-  margin: 12px 0;
+  margin-bottom: 12px;
 }
 .buttons__day:hover {
   background-color: #1447e6;
@@ -37,4 +56,34 @@
 }
 .move__icon {
   padding: 0px 8px;
+}
+@media (max-width: 767px) {
+  .buttons__day,
+  .buttons__clip,
+  .buttons__move {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    margin: 0;
+  }
+
+  .day__icon,
+  .clip__icon,
+  .move__icon {
+    height: 16px;
+    padding: 0px 4px;
+  }
+}
+@media (max-width: 480px) {
+  .buttons__day,
+  .buttons__clip,
+  .buttons__move {
+    padding: 8px 0;
+  }
+
+  .day__icon,
+  .clip__icon,
+  .move__icon {
+    display: none;
+  }
 }
