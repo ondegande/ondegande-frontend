@@ -221,7 +221,7 @@ export default function DoNow() {
       </div>
 
       <div className="width-100 column gap-20">
-        <h1 class="f-24 w-600">주변 관광지 ({places.length}개)</h1>
+        <h1 className="f-24 w-600">주변 관광지 ({places.length}개)</h1>
         <div className="grid-3 gap-20">
           {places.length > 0 ? (
             places.map((place) => <PlaceResults place={place} handlePlaceClick={handlePlaceClick} />)
